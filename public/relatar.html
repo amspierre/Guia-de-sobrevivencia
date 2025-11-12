@@ -3,9 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+input.form-control, 
+textarea.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input.form-control:focus, 
+textarea.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 4px #3b82f6;
+}
+
+textarea.form-control {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.navbar {
+  background-color: transparent !important;
+  padding: 15px 40px;
+}
+
+.nav-link {
+  color: #111 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #3b82f6 !important;
+}
+    </style>
+    <title>Relatar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: transparent;">
+        <div class="container-fluid">
+            <img src="./assets/images/logo.png" alt="Logo do site" style="width: 80px;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0 gap-5">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Criaturas</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Táticas</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Recursos</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Relatar</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <form> 
+        <h1>Relate um Ocorrido</h1> 
+        <div class="bd-example m-0 border-0"> <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Seu Nome</font></font></label>
+              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Localização aproximada do ocorrido</font></font></label>
+              <input class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Descreva o ocorrido</font></font></label>
+                <input class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <button class="btn btn-dark rounded-pill px-3" type="button"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar</font></font></button>
+          </form> </div>
 </body>
 </html>
