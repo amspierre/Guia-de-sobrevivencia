@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 100px; /* distância da navbar fixa */
+    }
+
+    .card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+  </style>
 </head>
 <body>
-    
+
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
+    <div class="container-fluid">
+      <img src="./../assets/images/logo.png" alt="Logo do site" style="width: 80px" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav mb-2 mb-md-0 gap-5">
+          <li class="nav-item"><a class="nav-link active" href="./../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./criaturas.html">Criaturas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./taticas.html">Táticas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./relatar.html">Relatar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">Criaturas</h1>
+  
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+  
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura1.jpg" class="card-img-top" alt="Criatura 1">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 1</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura2.jpg" class="card-img-top" alt="Criatura 2">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 2</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura3.jpg" class="card-img-top" alt="Criatura 3">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 3</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura4.jpg" class="card-img-top" alt="Criatura 4">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 4</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura5.jpg" class="card-img-top" alt="Criatura 5">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 5</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura6.jpg" class="card-img-top" alt="Criatura 6">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 6</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura7.jpg" class="card-img-top" alt="Criatura 7">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 7</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 8 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura8.jpg" class="card-img-top" alt="Criatura 8">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 8</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 9 -->
+        <div class="col">
+          <div class="card h-100" style="width: 18rem; margin: auto;">
+            <img src="./assets/images/criatura9.jpg" class="card-img-top" alt="Criatura 9">
+            <div class="card-body">
+              <h5 class="card-title">Criatura 9</h5>
+              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
