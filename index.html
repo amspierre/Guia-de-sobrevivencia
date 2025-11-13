@@ -3,39 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Guia da Sobrevivência</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-  </head>
-
-  <body>
     <style>
-      #relatar-ocorrencia{
-        background-color: #1E1E1E;
-        border-color: #1E1E1E;
+      body {
+        min-height: 200vh; /* apenas para ter rolagem */
+      }
+
+      #relatar-ocorrencia {
+        background-color: #1e1e1e;
+        border-color: #1e1e1e;
         border-radius: 0;
       }
 
-      .img-position {
-        position: absolute;
-        bottom: 0;
-        right: 0;
+      footer {
+        background-color: #1a1a1a;
+        color: #ccc;
+        text-align: center;
+        padding: 20px;
+        font-family: "Courier New", monospace;
+        border-top: 2px solid #444;
+        position: fixed;
+        bottom: -100px;
+        left: 0;
         width: 100%;
-        height: auto;
+        opacity: 0;
+        transition: all 0.6s ease;
+        z-index: 999;
       }
 
+      footer.visible {
+        bottom: 0;
+        opacity: 1;
+      }
     </style>
+  </head>
+
+  <body>
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
       <div class="container-fluid">
         <img src="./../assets/images/logo.png" alt="Logo do site" style="width: 80px" />
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-  
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
           <ul class="navbar-nav mb-2 mb-md-0 gap-5">
             <li class="nav-item"><a class="nav-link active" href="./index.html">Início</a></li>
@@ -48,14 +72,14 @@
       </div>
     </nav>
 
-    <main>
+    <main style="margin-top: 100px;">
       <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
             <img
               src="./assets/images/sobrevivente.png"
               class="d-block mx-lg-auto img-fluid"
-              alt="Bootstrap Themes"
+              alt="Sobrevivente"
               width="700"
               height="500"
               loading="lazy"
@@ -67,28 +91,45 @@
             </h1>
             <p class="lead">
               Em um mundo refeito pelo caos, o conhecimento é a nossa última moeda. Esta plataforma é o seu farol no escuro.
-
-Explore guias de sobrevivência, encontre dicas sobre criaturas hostis e descubra as melhores táticas de defesa e coleta de recursos. Descubra novas zonas seguras, mapeie rotas de suprimentos e aprenda a dominar o ambiente inóspito. E o mais importante: Compartilhe seu próprio relato.
+              Explore guias de sobrevivência, encontre dicas sobre criaturas hostis e descubra as melhores táticas de defesa e coleta de recursos.
+              Descubra novas zonas seguras, mapeie rotas de suprimentos e aprenda a dominar o ambiente inóspito. E o mais importante: compartilhe seu próprio relato.
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" id="relatar-ocorrencia">
-                Relatar ocorrencia
+                Relatar ocorrência
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
-    
-    <footer style="background-color:#1a1a1a; color:#ccc; text-align:center; padding:20px; font-family:'Courier New', monospace; border-top:2px solid #444;">
+
+    <footer id="footer">
       <p>2125 - <strong>Guia da Sobrevivência</strong></p>
       <p>“A civilização caiu, mas o conhecimento sobrevive.”</p>
-    </footer>    
-    
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const footer = document.getElementById("footer");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.body.scrollHeight;
+
+        // Mostra o footer quando o usuário tiver passado de 60% da página
+        if (scrollTop + windowHeight >= docHeight * 0.6) {
+          footer.classList.add("visible");
+        } else {
+          footer.classList.remove("visible");
+        }
+      });
+    </script>
   </body>
 </html>
