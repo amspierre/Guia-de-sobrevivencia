@@ -1,161 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      padding-top: 100px; /* distância da navbar fixa */
-    }
-
-    .card {
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criaturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 100px;
+      }
+      .card {
+        cursor: pointer;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
+      }
+      .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+      }
+      .modal-body img {
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
 
-  </style>
-</head>
-<body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
+      <div class="container-fluid">
+        <img src="./../assets/images/logo.png" alt="Logo do site" style="width: 80px" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-md-0 gap-5">
+            <li class="nav-item"><a class="nav-link active" href="./../index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./criaturas.html">Criaturas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./taticas.html">Táticas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./recursos.html">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./relatar.html">Relatar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
-    <div class="container-fluid">
-      <img src="./../assets/images/logo.png" alt="Logo do site" style="width: 80px" />
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <section class="py-5">
+      <div class="container">
+        <h1 class="text-center mb-5">Criaturas</h1>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-        <ul class="navbar-nav mb-2 mb-md-0 gap-5">
-          <li class="nav-item"><a class="nav-link active" href="./../index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./criaturas.html">Criaturas</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./taticas.html">Táticas</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./recursos.html">Recursos</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./relatar.html">Relatar</a></li>
-        </ul>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Dravos"
+              data-img="./../assets/images/criaturas/dravos.png"
+              data-desc="Criatura das sombras, seus olhos brilham no escuro e sua velocidade é letal. Costuma atacar em silêncio total."
+              data-vel="Alta"
+              data-altura="2,1 m"
+              data-forca="Agilidade e furtividade"
+              data-fraqueza="Luz intensa">
+              <img src="./../assets/images/criaturas/dravos.png" class="card-img-top" alt="Dravos">
+              <div class="card-body">
+                <h5 class="card-title">Dravos</h5>
+                <p class="card-text">Criatura das sombras, seus olhos brilham no escuro e sua velocidade é letal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Gorthal"
+              data-img="./../assets/images/criaturas/gorthal.png"
+              data-desc="Um titã coberto por escamas negras, com força suficiente para derrubar muralhas. Movimenta-se lentamente, mas é devastador."
+              data-vel="Baixa"
+              data-altura="6 m"
+              data-forca="Força bruta"
+              data-fraqueza="Lentidão e ataques à distância">
+              <img src="./../assets/images/criaturas/gorthal.png" class="card-img-top" alt="Gorthal">
+              <div class="card-body">
+                <h5 class="card-title">Gorthal</h5>
+                <p class="card-text">Titã coberto por escamas negras, com força devastadora.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Kovalsk"
+              data-img="./../assets/images/criaturas/kovalsk.png"
+              data-desc="Uma besta anfíbia que emerge dos pântanos. Sua pele viscosa o torna quase invisível em ambientes úmidos."
+              data-vel="Média"
+              data-altura="1,8 m"
+              data-forca="Camuflagem e adaptação aquática"
+              data-fraqueza="Ambientes secos">
+              <img src="./../assets/images/criaturas/kovalsk.png" class="card-img-top" alt="Kovalsk">
+              <div class="card-body">
+                <h5 class="card-title">Kovalsk</h5>
+                <p class="card-text">Besta anfíbia que se camufla em ambientes úmidos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Murloc"
+              data-img="./../assets/images/criaturas/murloc.png"
+              data-desc="Uma criatura alada que sobrevoa ruínas antigas. Seus gritos ecoam antes de descer em rasantes fatais."
+              data-vel="Alta"
+              data-altura="2,5 m (3,8 m de envergadura)"
+              data-forca="Velocidade aérea e visão aguçada"
+              data-fraqueza="Vento forte e ruído alto">
+              <img src="./../assets/images/criaturas/murloc.png" class="card-img-top" alt="Murloc">
+              <div class="card-body">
+                <h5 class="card-title">Murloc</h5>
+                <p class="card-text">Criatura alada que sobrevoa ruínas antigas e ataca em rasantes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Tharok"
+              data-img="./../assets/images/criaturas/tharok.png"
+              data-desc="Parasita colossal que vive sob o solo, atacando tudo que sente vibrar acima. Seus ataques são quase impossíveis de prever."
+              data-vel="Baixa"
+              data-altura="Desconhecida (subterrâneo)"
+              data-forca="Detecção sísmica e emboscadas subterrâneas"
+              data-fraqueza="Superfícies frias e rochosas">
+              <img src="./../assets/images/criaturas/tharok.png" class="card-img-top" alt="Tharok">
+              <div class="card-body">
+                <h5 class="card-title">Tharok</h5>
+                <p class="card-text">Parasita colossal que vive sob o solo, atacando por vibração.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Vaelor"
+              data-img="./../assets/images/criaturas/vaelor.png"
+              data-desc="Uma fera de seis patas coberta por espinhos cristalinos. Usa suas garras afiadas para rasgar concreto e aço."
+              data-vel="Média"
+              data-altura="2,3 m"
+              data-forca="Defesa natural e força física"
+              data-fraqueza="Ruído intenso e calor extremo">
+              <img src="./../assets/images/criaturas/vaelor.png" class="card-img-top" alt="Vaelor">
+              <div class="card-body">
+                <h5 class="card-title">Vaelor</h5>
+                <p class="card-text">Fera de seis patas coberta por espinhos cristalinos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Veytar"
+              data-img="./../assets/images/criaturas/veytar.png"
+              data-desc="Um predador ágil e silencioso, com pelagem translúcida. Caça em grupo e raramente erra um ataque coordenado."
+              data-vel="Alta"
+              data-altura="1,6 m"
+              data-forca="Trabalho em grupo e agilidade"
+              data-fraqueza="Luz ultravioleta">
+              <img src="./../assets/images/criaturas/veytar.png" class="card-img-top" alt="Veytar">
+              <div class="card-body">
+                <h5 class="card-title">Veytar</h5>
+                <p class="card-text">Predador ágil com pelagem translúcida, caçando em grupo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Vraalk"
+              data-img="./../assets/images/criaturas/vraalk.png"
+              data-desc="Um antigo ser mutante que absorve energia térmica. Onde passa, o frio domina e o silêncio é absoluto."
+              data-vel="Baixa"
+              data-altura="3 m"
+              data-forca="Absorção de calor e resistência extrema"
+              data-fraqueza="Altas temperaturas">
+              <img src="./../assets/images/criaturas/vraalk.png" class="card-img-top" alt="Vraalk">
+              <div class="card-body">
+                <h5 class="card-title">Vraalk</h5>
+                <p class="card-text">Ser mutante que absorve energia térmica e domina o frio.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#creatureModal"
+              data-name="Zharok"
+              data-img="./../assets/images/criaturas/zharok.png"
+              data-desc="Entidade etérea que se alimenta do medo. Aparece apenas quando as luzes se apagam — e desaparece sem deixar rastros."
+              data-vel="Alta"
+              data-altura="Variável (forma etérea)"
+              data-forca="Manipulação emocional e invisibilidade"
+              data-fraqueza="Luz constante e ruídos contínuos">
+              <img src="./../assets/images/criaturas/zharok.png" class="card-img-top" alt="Zharok">
+              <div class="card-body">
+                <h5 class="card-title">Zharok</h5>
+                <p class="card-text">Entidade etérea que se alimenta do medo e surge no escuro.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="creatureModal" tabindex="-1" aria-labelledby="creatureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-md-down modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0 h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-6 h-100">
+                <img src="" id="modalImage" class="img-fluid h-100 w-100" alt="Imagem da criatura">
+              </div>
+
+              <div class="col-md-6 p-4 d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h3 id="modalName"></h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <p id="modalDesc" class="mt-3"></p>
+
+                <h5 class="mt-4">Atributos</h5>
+                <table class="table table-sm align-middle">
+                  <tbody>
+                    <tr><th>Velocidade</th><td id="modalVel"></td></tr>
+                    <tr><th>Altura</th><td id="modalAltura"></td></tr>
+                    <tr><th>Pontos Fortes</th><td id="modalForca"></td></tr>
+                    <tr><th>Fraquezas</th><td id="modalFraqueza"></td></tr>
+                  </tbody>
+                </table>
+
+                <div class="mt-auto text-end">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <section class="py-5">
-    <div class="container">
-      <h1 class="text-center mb-5">Criaturas</h1>
-  
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-  
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura1.jpg" class="card-img-top" alt="Criatura 1">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 1</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura2.jpg" class="card-img-top" alt="Criatura 2">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 2</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura3.jpg" class="card-img-top" alt="Criatura 3">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 3</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura4.jpg" class="card-img-top" alt="Criatura 4">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 4</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 5 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura5.jpg" class="card-img-top" alt="Criatura 5">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 5</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 6 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura6.jpg" class="card-img-top" alt="Criatura 6">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 6</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 7 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura7.jpg" class="card-img-top" alt="Criatura 7">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 7</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 8 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura8.jpg" class="card-img-top" alt="Criatura 8">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 8</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card 9 -->
-        <div class="col">
-          <div class="card h-100" style="width: 18rem; margin: auto;">
-            <img src="./assets/images/criatura9.jpg" class="card-img-top" alt="Criatura 9">
-            <div class="card-body">
-              <h5 class="card-title">Criatura 9</h5>
-              <p class="card-text">Descrição breve da criatura e suas habilidades únicas.</p>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>
+    <footer class="bg-dark text-light text-center py-3 mt-5 border-top border-secondary">
+      <p>2125 - <strong>Guia da Sobrevivência</strong></p>
+      <p class="mb-0">“A civilização caiu, mas o conhecimento sobrevive.”</p>
+    </footer>
 
-  <footer style="background-color:#1a1a1a; color:#ccc; text-align:center; padding:20px; font-family:'Courier New', monospace; border-top:2px solid #444;">
-    <p>2125 - <strong>Guia da Sobrevivência</strong></p>
-    <p>“A civilização caiu, mas o conhecimento sobrevive.”</p>
-  </footer> 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const creatureModal = document.getElementById('creatureModal');
+      creatureModal.addEventListener('show.bs.modal', event => {
+        const card = event.relatedTarget;
+        document.getElementById('modalImage').src = card.dataset.img;
+        document.getElementById('modalName').textContent = card.dataset.name;
+        document.getElementById('modalDesc').textContent = card.dataset.desc;
+        document.getElementById('modalVel').textContent = card.dataset.vel;
+        document.getElementById('modalAltura').textContent = card.dataset.altura;
+        document.getElementById('modalForca').textContent = card.dataset.forca;
+        document.getElementById('modalFraqueza').textContent = card.dataset.fraqueza;
+      });
+    </script>
+  </body>
 </html>
